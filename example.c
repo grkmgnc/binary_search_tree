@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//  İkili ağaç düğümü yapısı
+//  Binary Tree Node Structure
 struct Node
 {
     int data;
@@ -10,7 +10,7 @@ struct Node
 };
 void deleteNode(struct Node **);
 int goMostLeft(struct Node **);
-// Yeni düğüm oluşturma fonksiyonu
+
 struct Node *createNode(int data)
 {
     struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
@@ -20,7 +20,7 @@ struct Node *createNode(int data)
     return newNode;
 }
 
-// İkili arama ağacına eleman ekleme fonksiyonu
+
 struct Node *insert(struct Node *root, int data)
 {
     if (root == NULL)
@@ -136,7 +136,7 @@ int main()
 {
     struct Node *root = NULL;
 
-    // Ağaca eleman ekleme
+  
     root = insert(root, 50);
     root = insert(root, 30);
     root = insert(root, 70);
@@ -145,7 +145,7 @@ int main()
     root = insert(root, 60);
     root = insert(root, 80);
 
-    // Dolaşma yöntemlerini ekrana yazdırma
+    // Output of traversals
     printf("Pre-order traversal: ");
     preOrder(root);
     printf("\n");
